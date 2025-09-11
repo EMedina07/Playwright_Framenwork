@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts",
+    "test:qa": "ENV=qa npm run test",
+    "test:dev": "ENV=cert npm run test",
+    "report": "node report.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}
